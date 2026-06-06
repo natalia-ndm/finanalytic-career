@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinAnalytic Tools | Карьерная консультация финансового аналитика</title>
+    <meta name="description" content="Карьерная консультация финансового аналитика, веб-моделирование, портфолио для инвестиционных отделов, курс и шаблоны.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #1a202c;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #1e3a8a;
+            color: white;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e40af;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: #1e3a8a;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            border: 1.5px solid #1e3a8a;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background-color: #eef2ff;
+        }
+
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .badge {
+            background-color: #e0e7ff;
+            color: #1e3a8a;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: #475569;
+            margin-bottom: 32px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .pain-item {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 20px;
+        }
+
+        .card-product {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 28px;
+            padding: 28px;
+            transition: 0.2s;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin: 16px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f8fafc;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 16px 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #eef2ff;
+            font-weight: 600;
+        }
+
+        .steps {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .step {
+            flex: 1;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 24px;
+        }
+
+        form {
+            background: #f8fafc;
+            padding: 40px;
+            border-radius: 32px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 20px;
+            font-family: inherit;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+        }
+
+        .footer {
+            background: #f1f5f9;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 14px;
+            color: #334155;
+            border-radius: 24px;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            .section {
+                padding: 48px 0;
+            }
+            .steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Хедер -->
+<section style="padding-top: 64px; padding-bottom: 48px;">
+    <div class="container">
+        <div class="grid-2">
+            <div>
+                <span class="badge">Экспертный веб-ресурс для финансистов</span>
+                <h1>Как финансовому аналитику пройти собеседование в инвестиционный отдел за 3 недели?</h1>
+                <p class="hero-sub">Карьерная консультация действующего аналитика + готовые веб-модели в портфолио.</p>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                    <a href="#form" class="btn-primary">Записаться на карьерную сессию</a>
+                    <a href="#templates" class="btn-secondary">Смотреть шаблоны бесплатно</a>
+                </div>
+                <p style="margin-top: 20px; font-size: 14px; color: #475569;">Без воды. Только инструменты, которые реально работают в DCM и FP&A</p>
+            </div>
+            <div>
+                <img src="https://placehold.co/600x400/eef2ff/1e3a8a?text=Фин+аналитик+инструменты" alt="Финансовый аналитик" style="width:100%; border-radius: 32px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Проблема -->
+<section class="section">
+    <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 48px auto;">
+            <span class="badge">Боль</span>
+            <h2>Почему даже с красным дипломом вас не приглашают на собеседования?</h2>
+        </div>
+        <div class="grid-3">
+            <div class="pain-item">
+                <h3>🧾 Резюме как у всех</h3>
+                <p>«Финансовый аналитик, Excel, ответственность» — так пишут 500 человек на одну вакансию.</p>
+            </div>
+            <div class="pain-item">
+                <h3>📊 Нет портфолио</h3>
+                <p>HR хочет видеть не оценки, а готовые модели DCF, P&L, дашборды. Но где их взять без работы?</p>
+            </div>
+            <div class="pain-item">
+                <h3>🌐 Не хватает веб-навыков</h3>
+                <p>Работодатели всё чаще требуют Python, SQL, веб-скрейпинг. В вузах этому не учат.</p>
+            </div>
+        </div>
+        <div style="background: #eef2ff; padding: 24px; border-radius: 40px; margin-top: 32px; text-align: center;">
+            <p style="font-size: 18px; font-weight: 500;">«Вы умеете считать NPV и IRR. Но конкуренты умеют ещё и автоматизировать отчёты в браузере»</p>
+        </div>
+    </div>
+</section>
+
+<!-- Карьерная консультация -->
+<section class="section" style="background-color: #fafcff;">
+    <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 48px;">
+            <span class="badge">Главный продукт</span>
+            <h2>Карьерная сессия с финансовым аналитиком: не теория, а пошаговый план трудоустройства</h2>
+            <p>90 минут Zoom. Результат — вы выходите с резюме, портфолио и списком компаний, где вас ждут.</p>
+        </div>
+        <table>
+            <thead>
+                <tr><th>Что делаем</th><th>Что получаете</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>🔍 Разбор резюме</td><td>Точечные правки под вакансии «Финансовый аналитик», «Инвестиционный аналитик», «Аналитик FP&A»</td></tr>
+                <tr><td>📁 Портфолио за 7 дней</td><td>Собираем 3 кейса из библиотеки шаблонов (DCF, P&L, дашборд)</td></tr>
+                <tr><td>🎤 Симуляция собеседования</td><td>30 мин с реальными вопросами из отделов DCM, M&A, казначейства</td></tr>
+                <tr><td>🗺 Карьерный план</td><td>Список из 10 компаний + контакты HR + стратегия отклика</td></tr>
+                <tr><td>🎓 Доступ к курсу (бонус)</td><td>2 модуля «Веб-моделирование для финансистов» бесплатно</td></tr>
+            </tbody>
+        </table>
+        <div style="text-align: center; margin-top: 40px;">
+            <div class="price" style="font-size: 36px;">7 500 ₽</div>
+            <a href="#form" class="btn-primary" style="margin: 12px 0;">Выбрать дату консультации</a>
+            <p style="font-size: 14px; color: #2d3c5e;">Если после консультации вы не получите минимум 2 конкретных улучшения для резюме и плана — я верну деньги</p>
+        </div>
+    </div>
+</section>
+
+<!-- Доверие -->
+<section class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div><img src="https://placehold.co/500x500/e2e8f0/1e3a8a?text=Фото+эксперта" style="width:100%; border-radius: 32px;" alt="Фото эксперта"></div>
+            <div>
+                <span class="badge">Авторитет</span>
+                <h2>Почему можно доверять?</h2>
+                <p style="font-size: 20px; font-weight: 600;">Александр К.</p>
+                <p style="margin-bottom: 16px;">Действующий финансовый аналитик, магистр «Финансы и кредит»</p>
+                <ul style="margin-bottom: 24px; list-style: none; padding-left: 0;">
+                    <li>✓ 8 лет в корпоративных финансах (P&L, бюджетирование, инвестпроекты)</li>
+                    <li>✓ Провёл 40+ карьерных сессий, трудоустроено 32 аналитика</li>
+                    <li>✓ Автор веб-курса «Финансовое моделирование в браузере» (500+ студентов)</li>
+                </ul>
+                <div style="background: #f1f5f9; padding: 20px; border-radius: 24px;">«Я сам проходил путь от студента до аналитика в крупной компании. Знаю, какие навыки реально проверяют на собеседованиях»</div>
+                <div style="margin-top: 24px;"><a href="#form" class="btn-primary">Тоже хочу результат →</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Дополнительные продукты -->
+<section class="section" id="templates">
+    <div class="container">
+        <div style="text-align: center;"><span class="badge">Для самостоятельного старта</span><h2>Если вы хотите начать с готовых инструментов</h2></div>
+        <div class="grid-3" style="margin-top: 40px;">
+            <div class="card-product"><h3>📘 Веб-моделирование для финансового анализа</h3><p>5 модулей, 15 видео, 3 готовые модели (DCF, P&L, дашборд). Доступ навсегда.</p><div class="price">4 900 ₽</div><a href="#" class="btn-secondary" style="display: inline-block;">Купить курс</a></div>
+            <div class="card-product"><h3>📁 Библиотека шаблонов</h3><p>DCF-шаблон, P&L-модель, дашборд, чек-лист по отраслям. Ежемесячное обновление.</p><div class="price">1 200 ₽/мес</div><a href="#" class="btn-secondary">Подписаться</a></div>
+            <div class="card-product"><h3>🚀 Пакет «Старт карьеры»</h3><p>Консультация + Курс + 3 мес подписки. Экономия 7 000 ₽.</p><div class="price">19 900 ₽</div><a href="#form" class="btn-primary" style="width:100%; text-align: center;">Выбрать пакет</a></div>
+        </div>
+    </div>
+</section>
+
+<!-- Дорожная карта -->
+<section class="section">
+    <div class="container">
+        <div style="text-align: center;"><h2>Как будет выглядеть наша работа</h2></div>
+        <div class="steps" style="margin-top: 40px;">
+            <div class="step"><strong>1. 📝 Анкета</strong><br>Вы заполняете опыт и цели (5 минут)</div>
+            <div class="step"><strong>2. 🧠 Подготовка</strong><br>Я анализирую рынок и готовлю вопросы (1 день)</div>
+            <div class="step"><strong>3. 🎥 90 мин Zoom</strong><br>Резюме → портфолио → собеседование → план</div>
+            <div class="step"><strong>4. 📬 После сессии</strong><br>Чек-лист на 3 недели + Telegram-поддержка</div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;"><a href="#form" class="btn-primary">Начать карьерный трек</a></div>
+    </div>
+</section>
+
+<!-- Форма заявки -->
+<section class="section" id="form">
+    <div class="container">
+        <div style="max-width: 700px; margin: 0 auto;">
+            <form action="#" method="POST">
+                <h2 style="text-align: center;">Оставьте заявку — и я пришлю доступ к календарю</h2>
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Email" required>
+                <select>
+                    <option>Карьерная консультация (90 мин)</option>
+                    <option>Курс «Веб-моделирование»</option>
+                    <option>Библиотека шаблонов</option>
+                    <option>Пакет «Старт карьеры»</option>
+                </select>
+                <input type="text" placeholder="Удобная дата для консультации (если выбрали консультацию)">
+                <button type="submit" class="btn-primary" style="width:100%;">Отправить заявку →</button>
+                <p style="font-size: 12px; text-align: center; margin-top: 16px;">Никакого спама. Только подтверждение записи и полезные материалы</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+    <div class="container">
+        <h2 style="text-align: center;">Частые вопросы</h2>
+        <div style="max-width: 800px; margin: 32px auto 0;">
+            <div class="faq-item"><strong>У меня совсем нет опыта в финансах, только учёба. Подойдёт?</strong><br>Да. Разберём ваши академические проекты как полноценные кейсы.</div>
+            <div class="faq-item"><strong>Я из другого города / страны</strong><br>Вся консультация онлайн. Нужен только Zoom.</div>
+            <div class="faq-item"><strong>Что я получу сразу после оплаты?</strong><br>Письмо с анкетой и ссылкой на календарь.</div>
+            <div class="faq-item"><strong>Можно сначала купить только курс, а потом доплатить за консультацию?</strong><br>Да. Напишите мне — сделаю скидку на консультацию 20%.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Футер -->
+<div class="footer">
+    <div class="container">
+        <p>© 2026 FinAnalytic Tools. Все права защищены. Для финансовых аналитиков и инвестиционных специалистов.</p>
+        <p style="margin-top: 12px;"><a href="#" style="color:#1e3a8a;">Политика конфиденциальности</a> | <a href="#" style="color:#1e3a8a;">Договор оферты</a> | 📧 consult@finanalytic-tools.ru</p>
+    </div>
+</div>
+
+</body>
+</html>
