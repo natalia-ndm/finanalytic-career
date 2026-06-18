@@ -205,7 +205,50 @@
             border-radius: 24px;
             margin: 40px 0;
         }
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 16px 0 24px 0;
+}
 
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: #334155;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.checkbox-group label a {
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+
+.legal-block {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 24px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.legal-block h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 12px;
+}
         @media (max-width: 768px) {
             .grid-2, .grid-3 {
                 grid-template-columns: 1fr;
